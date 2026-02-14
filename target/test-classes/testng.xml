@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Flipkart Android Suite" verbose="1" parallel="false">
+
+  <!-- If using emulator, set udid to something like emulator-5554 -->
+  <parameter name="udid" value="adb-df6e2fe6-ufXVqf._adb-tls-connect._tcp" />
+  <parameter name="deviceName" value="OnePlus AC2001 API 31" />
+  <parameter name="appiumServerUrl" value="http://127.0.0.1:4723" />
+
+  <!-- Using APK install as requested -->
+  <parameter name="useApk" value="true" />
+   <parameter name="apkPath" value="C:\Users\gajinath\OneDrive - Capgemini\Desktop\Automation\APK's\Flipkart.apk" />
+
+  <!-- If NOT using APK, these would be used -->
+  <parameter name="appPackage" value="com.flipkart.android" />
+  <parameter name="appActivity" value="activity.HomeFragmentHolderActivity" />
+
+  <test name="Search Tests">
+    <classes>
+      <class name="tests.SearchTest"/>
+    </classes>
+  </test>
+</suite>
